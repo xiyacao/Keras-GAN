@@ -12,6 +12,8 @@ class DataLoader():
         data_type = "train" if not is_testing else "test"
         
         path = glob('./datasets/%s/*' % (self.dataset_name))
+        #print (path)
+        #print (self.dataset_name)
 
         batch_images = np.random.choice(path, size=batch_size)
 
